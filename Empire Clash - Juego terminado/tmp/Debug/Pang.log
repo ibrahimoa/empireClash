@@ -1,0 +1,31 @@
+﻿  Cannon.cpp
+  CoordinadorJuego.cpp
+  Defensa.cpp
+  Disparo.cpp
+  Carro.cpp
+  DisparoDefensas.cpp
+  DisparoTropas.cpp
+  Interaccion.cpp
+  InteraccionListas.cpp
+  Lista.cpp
+  Soldado.cpp
+  Jeep.cpp
+  ListaDisparos.cpp
+g:\gieya\trabajo_informatica\empire clash - juego terminado\src\listadisparos.cpp(32): warning C4018: '<': no coinciden signed/unsigned
+g:\gieya\trabajo_informatica\empire clash - juego terminado\src\listadisparos.cpp(40): warning C4018: '<': no coinciden signed/unsigned
+g:\gieya\trabajo_informatica\empire clash - juego terminado\src\listadisparos.cpp(46): warning C4018: '>=': no coinciden signed/unsigned
+g:\gieya\trabajo_informatica\empire clash - juego terminado\src\listadisparos.cpp(55): warning C4018: '>=': no coinciden signed/unsigned
+g:\gieya\trabajo_informatica\empire clash - juego terminado\src\listadisparos.cpp(63): warning C4018: '<': no coinciden signed/unsigned
+  Loseta.cpp
+  Aldea.cpp
+  Menu.cpp
+  Objeto.cpp
+  Pang.cpp
+  Tanque.cpp
+  Torreta.cpp
+  Generando código...
+  Compilando...
+  Tropa.cpp
+  Vector2D.cpp
+  Generando código...
+  Pang.vcxproj -> G:\GIEyA\Trabajo_informatica\Empire Clash - Juego terminado\bin\Pang.exe
