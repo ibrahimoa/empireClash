@@ -43,7 +43,7 @@ public:
 
 	void setRageTropas() {
 		if (!rageTropas) {
-			tropas.rageMode(2.0f);
+			tropas.rageMode(3.0f);
 			rageTropas = true;
 		}
 	}
@@ -51,7 +51,7 @@ public:
 
 	void setRageDefensas() { 
 		if (!rageDefensas) {
-			defensas.rageMode(2.0f);
+			defensas.rageMode(3.0f);
 			rageDefensas = true;
 		}
 	}

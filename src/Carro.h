@@ -10,6 +10,8 @@ public:
 	virtual void rageMode(float f) {
 		setRage();
 		daño = getDaño() * f;
+		velocidad += 1.5f;
+		alcance -= 5.0f;
 	}
 };
 
