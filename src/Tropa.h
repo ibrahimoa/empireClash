@@ -26,5 +26,5 @@ public:
 	void setVel(Vector2D velo) { vel = velo; }
 	float getVel() { return velocidad; };
 	Vector2D getVvel() { return vel; }
-	void rageMode(float porcentaje){} //Código a implementar más tarde.Debe estar pues en la plantilla de listas se le llama
+	virtual void rageMode(float f){}  // do nothing by default
 };

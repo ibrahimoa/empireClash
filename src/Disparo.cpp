@@ -3,7 +3,7 @@
 #include "glut.h"
 
 
-Disparo::Disparo(Vector2D start,Vector2D veloc, float d,float a, bool tr)
+Disparo::Disparo(Vector2D start,Vector2D veloc, float d,float a, bool tr, bool rg)
 {	
 	fin = false;
 	pos_incial = start;
@@ -14,6 +14,7 @@ Disparo::Disparo(Vector2D start,Vector2D veloc, float d,float a, bool tr)
 	vel = (veloc.unitario()) * 60.0f;
 	radio = 1.0f;
 	tropa = tr;
+	rage = rg;
 }
 
 

@@ -13,5 +13,5 @@ public:
 	~Defensa();
 
 	void dibuja();
-	virtual void rageMode(float f){}
+	virtual void rageMode(float f){}  // do nothing by default
 };

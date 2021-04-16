@@ -21,10 +21,12 @@ private:
 	float y_ojo;
 	float z_ojo;
 	char tipoTropa;
-	bool rage;
+	bool rageTropas;
+	bool rageDefensas;
 public:
 	Aldea();
 	~Aldea();
+
 	void inicializa();
 	void mueve();
 	void dibuja();
@@ -36,9 +38,30 @@ public:
 	int getNumTro() { return tropas.getNumero(); }
 	int getNumTroDisp() { return tropas_disponibles; }
 	int getNivel() { return nivel; }
-	void rageMode(float p);
 	void dibujaMenu();
 	void resetNiv() { nivel = 0;}
-	void setRage() { rage = true; }
+
+	void setRageTropas() {
+		if (!rageTropas) {
+			tropas.rageMode(2.0f);
+			rageTropas = true;
+		}
+	}
+	void resetRageTropas() { rageTropas = false; }
+
+	void setRageDefensas() { 
+		if (!rageDefensas) {
+			defensas.rageMode(2.0f);
+			rageDefensas = true;
+		}
+	}
+	void resetRageDefensas() {
+		if (rageDefensas) {
+			rageDefensas = false;
+		}
+	}
+
+	bool getRageTropas() { return rageTropas; }
+	bool getRageDefensas() { return rageDefensas; }
 };
 

@@ -11,5 +11,9 @@ public:
 	~Soldado();
 
 	virtual void mueve(float t);
+	virtual void rageMode(float f) { // Soldado no tiene rage mode
+		resetRage();
+		// Do nothing
+	}
 };
 

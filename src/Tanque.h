@@ -9,7 +9,8 @@ public:
 	~Tanque();
 	void setPos(float x, float y, int niv = 1);
 	virtual void rageMode(float f) {
-		daño += getDaño()*(f - 1);
-		vida += getVida_inic()*(f - 1);
+		setRage();
+		daño = getDaño() * f;
+		vida += getVida_inic() * f;
 	}
 };

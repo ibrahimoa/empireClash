@@ -21,14 +21,14 @@ void CoordinadorJuego::tecla(unsigned char key) {
 		// GAMEOVER no conserve su estado.
 		resetFlag();
 
-		if (key == 's' || key == 'S') estado=INSTRUCCIONES;
+		if (key == 's' || key == 'S') estado=CARGA;
 		
 		else if (key == 'e' || key == 'E') exit(0);
 	}
-
+/*
 	else if (estado == INSTRUCCIONES) {
 		if (key == ' ') estado = CARGA;
-	}
+	}*/
 
 	else if (estado == CARGA) {
 		if (key == 'c' || key == 'C') {
@@ -74,11 +74,11 @@ void CoordinadorJuego::tecla(unsigned char key) {
 			ETSIDI::playMusica("sonidos/Intro.wav");
 
 		    estado = INICIO;
-
-
 	    }
-		else if (key == 'e' || key == 'E')
+		else if (key == 'e' || key == 'E') {
 			exit(0);
+		}
+			
 	}
 
 	else if (estado == FIN)
@@ -128,6 +128,10 @@ void CoordinadorJuego::raton(int button, int state, int x, int y) {
 void CoordinadorJuego::mueve() {
 
 	if (estado == JUEGO) {
+		if ((aldea.getNumDef() <= 1) && (!aldea.getRageDefensas())) {
+			aldea.setRageDefensas();
+		}
+
 		aldea.mueve();
 
 		if (!aldea.getNumDef()){
@@ -143,10 +147,6 @@ void CoordinadorJuego::mueve() {
 		
 		}
 		
-
-
-		
-		
 		// Si no quedan tropas, pero si defensas, o si atajo por teclado, pasamos a GAMEOVER
 		if (!aldea.getNumTroDisp() && aldea.getNumDef() && !aldea.getNumTro() || flag == 1) {
 			
@@ -154,9 +154,7 @@ void CoordinadorJuego::mueve() {
 			ETSIDI::stopMusica();
 			ETSIDI::playMusica("sonidos/game-over.wav");
 		}
-		if (aldea.getNumDef() <= 1) {
-			aldea.rageMode(3.0f);
-		}
+
 	}
 }
 
@@ -182,28 +180,29 @@ void CoordinadorJuego::dibuja() {
 		ETSIDI::setFont("fuentes/Bitwise.ttf", 13);
 		ETSIDI::printxy("Victor Zamora Mayoral", 6, -1);
 		ETSIDI::printxy("Ibrahim Oulad Amar", 6, -2);
-		ETSIDI::printxy("Alejandro Ramírez Lopez", 6, -3);
+		ETSIDI::printxy("Alejandro Ramirez Lopez", 6, -3);
 	}
-	else if (estado==INSTRUCCIONES){
+/*	else if (estado==INSTRUCCIONES){
 		pantalla.~Loseta();
+
+		//Ponemos fondo a la pantalla de incicio
 		gluLookAt(0, 7.5, 30, // posicion del ojo
 			0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 			0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
-		//Ponemos fondo a la pantalla de incicio
-
+		
 		//Poner imagen con las instrucciones
 		pantalla.setPos("imagenes/instruccion.png", -14.5, -3.5, 14.5, 18.5, 0.0);
 		pantalla.dibuja();
 	
-	}
+	}*/
 	else if (estado == CARGA) {
 		pantalla.~Loseta();
-		
+
+		//Ponemos fondo a la pantalla de incicio
 		gluLookAt(0, 7.5, 30, // posicion del ojo
 			0.0, 7.5, 0.0, // hacia que punto mira (0,7.5,0)
 			0.0, 1.0, 0.0); // definimos hacia arriba (eje Y)
-		//Ponemos fondo a la pantalla de incicio
-
+		
 		//Poner imagen con las instrucciones
 		pantalla.setPos("imagenes/Loading.png", -14.5, -3.5, 14.5, 18.5, 0.0);
 		pantalla.dibuja();
@@ -264,4 +263,4 @@ void CoordinadorJuego::dibuja() {
 		ETSIDI::printxy("PRESS  C  T0 C0NTINUE", -28, -10);
 		ETSIDI::printxy("PRESS  E  T0 EXIT", -23, -20);
 	}
-} 
+}

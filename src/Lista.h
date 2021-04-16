@@ -112,7 +112,7 @@ template<class T> void Lista<T>::marcha(float t, ListaDisparos &disparos) {
 			lista[i]->mueve(t);
 		}
 		else {
-			DisparoTropas* d = new DisparoTropas(lista[i]->getPos(), lista[i]->getMasCercano(), lista[i]->getDaño(),lista[i]->getAlcance() ,true);
+			DisparoTropas* d = new DisparoTropas(lista[i]->getPos(), lista[i]->getMasCercano(), lista[i]->getDaño(),lista[i]->getAlcance() , true, lista[i]->getRage());
 			disparos.agregar(d);
 		}
 	}
@@ -123,7 +123,7 @@ template<class T> void Lista<T>::dispara(ListaDisparos &disparos) {
 	for (int i = 0; i < numero; i++) {
 		if ((lista[i]->getMasCercano()).getModulo() <= lista[i]->getAlcance()) {
 
-			DisparoDefensas* d = new DisparoDefensas(lista[i]->getPos(), lista[i]->getMasCercano(), lista[i]->getDaño(),lista[i]->getAlcance(), false);
+			DisparoDefensas* d = new DisparoDefensas(lista[i]->getPos(), lista[i]->getMasCercano(), lista[i]->getDaño(),lista[i]->getAlcance(), false, lista[i]->getRage());
 			disparos.agregar(d);
 		}
 	}

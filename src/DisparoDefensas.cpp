@@ -6,9 +6,15 @@ DisparoDefensas::~DisparoDefensas()
 {
 }
 
+
 void DisparoDefensas::dibuja() {
 
-	glColor3f(0.2f, 0.1f, 0.0f);
+	if (rage == true) {
+		glColor3f(0.9f, 0.1f, 0.1f);
+	}
+	else {
+		glColor3f(0.8f, 0.5f, 0.5f);
+	}
 
 	glDisable(GL_LIGHTING);
 	glEnable(GL_LIGHTING);

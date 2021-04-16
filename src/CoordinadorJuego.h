@@ -21,7 +21,7 @@ protected:
 	Vector2D Raton;
 	Loseta pantalla;
 	Aldea aldea;
-	enum Estado { INICIO, INSTRUCCIONES, CARGA, JUEGO, INTERMEDIO, GAMEOVER, FIN, PAUSA };
+	enum Estado { INICIO, CARGA, JUEGO, INTERMEDIO, GAMEOVER, FIN, PAUSA };
 	Estado estado;
 	bool flag;
 	void resetFlag() { flag = 0; }

@@ -14,12 +14,13 @@ protected:
 	float lado;
 	float daño;
 	float alcance;
+	bool rage;
 	std::string direccion;
 	Vector2D tamaño;
 	Vector2D mas_cercano;
 
 public:
-	Objeto(Vector2D pos, float l, float alcan, Vector2D tam):posicion(pos), lado(l), alcance(alcan), tamaño(tam) {}
+	Objeto(Vector2D pos, float l, float alcan, Vector2D tam) : posicion(pos), lado(l), alcance(alcan), tamaño(tam), rage(false) {}
 	~Objeto();
 
 	Vector2D getPos() {
@@ -46,6 +47,12 @@ public:
 	void reducirVida(float d) { vida -= d; }
 
 	void setMasCercano(Vector2D objeto) { mas_cercano = objeto; }
+
+	void setRage() { rage = true; }
+
+	void resetRage() { rage = false; }
+
+	bool getRage() { return rage; }
 
 	Vector2D getMasCercano() { return mas_cercano; }
 };

@@ -13,8 +13,8 @@ public:
 	bool agregar(Disparo* d);
 	void dibuja();
 	void destruirContenido();
-	void eliminar(int index);
+	void eliminar(unsigned int index);
 	int getNumero() { return lista.size(); }
-	Disparo* operator [](int);
+	Disparo* operator [](unsigned int);
 	void mueve(float t);
 };

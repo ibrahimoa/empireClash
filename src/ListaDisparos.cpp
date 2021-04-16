@@ -29,7 +29,7 @@ bool ListaDisparos::agregar(Disparo* d)
 
 void ListaDisparos::destruirContenido()
 {
-	for (int i = 0; i < lista.size(); i++) {
+	for (unsigned int i = 0; i < lista.size(); i++) {
 		delete lista[i];
 		lista.erase(lista.begin() + i);
 	}
@@ -37,11 +37,11 @@ void ListaDisparos::destruirContenido()
 
 void ListaDisparos::dibuja()
 {
-	for (int i = 0; i < lista.size(); i++)
+	for (unsigned int i = 0; i < lista.size(); i++)
 		lista[i]->dibuja();
 }
 
-Disparo *ListaDisparos::operator [](int i)
+Disparo *ListaDisparos::operator [](unsigned int i)
 {
 	if (i >= lista.size())//si me paso, devuelvo la ultima
 		i = lista.size() - 1;
@@ -50,7 +50,7 @@ Disparo *ListaDisparos::operator [](int i)
 	return lista[i];
 }
 
-void ListaDisparos::eliminar(int index)
+void ListaDisparos::eliminar(unsigned int index)
 {
 	if ((index < 0) || (index >= lista.size()))
 		return;
@@ -60,7 +60,7 @@ void ListaDisparos::eliminar(int index)
 }
 
 void ListaDisparos::mueve(float t) {
-	for (int i = 0; i < lista.size(); i++){
+	for (unsigned int i = 0; i < lista.size(); i++){
 
 		// Los disparos desaparecerán cuando salgan de los límites de la pantalla.
 		if (((lista[i]->getPos()).x < -77) || ((lista[i]->getPos()).x > 77) || ((lista[i]->getPos()).y < -40) || ((lista[i]->getPos()).y > 62)) {

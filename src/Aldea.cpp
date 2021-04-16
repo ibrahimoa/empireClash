@@ -65,7 +65,10 @@ void Aldea::tecla(unsigned char key) {
 		menu.setActivo(1);
 	if (key == 'e' || key == 'E')
 		menu.setActivo(2);
-
+	if (key == 'r' || key == 'R') {
+		setRageTropas();
+	}
+		
 	 // YO NO LO PONDRIA . JANDRUS
 
 	//// Más HACKS para desarrolladores
@@ -75,9 +78,11 @@ void Aldea::tecla(unsigned char key) {
 	//	tropas.destruirContenido();
 }
 
+
 void Aldea::teclaEspecial(unsigned char key) {
 	
 }
+
 
 void Aldea::raton(int button, int state, int x, int y) {
 	GLint viewport[4];
@@ -134,6 +139,8 @@ bool Aldea::cargarNivel(bool avanza) {
 	tropas.destruirContenido();
 	defensas.destruirContenido();
 	disparos.destruirContenido();
+	resetRageDefensas();
+	resetRageTropas();
 
 	// Usamos un bool por defecto como 'HACK' para avanzar al último nivel
 	if (avanza == 1) nivel = 4;
@@ -235,6 +242,7 @@ bool Aldea::cargarNivel(bool avanza) {
 	return false;
 }
 
+
 void Aldea::dibujaMenu() {
 	string str = to_string(tropas_disponibles);
 
@@ -244,9 +252,4 @@ void Aldea::dibujaMenu() {
 	}
 	else ETSIDI::printxy("No troops available", -20, -47);
 }
-void Aldea::rageMode(float p) {
-	if (!rage) {
-		defensas.rageMode(p);
-		setRage();
-	}
-}
+
