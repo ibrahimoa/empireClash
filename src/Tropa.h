@@ -16,7 +16,7 @@ protected:
 	SpriteSequence sprite;
 	
 public:
-	Tropa(std::string direccion, Vector2D tam, float vel, Vector2D pos, float l, float alcan);
+	Tropa(std::string direccion, Vector2D tam, float vel, Vector2D pos, float l, float alcan, unsigned int cad);
 	~Tropa();
 
 	void dibuja();

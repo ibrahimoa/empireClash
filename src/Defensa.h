@@ -9,7 +9,7 @@ class Defensa : public Objeto
 {
 
 public:
-	Defensa(Vector2D pos, Vector2D tam, float l, float alcan) : Objeto(pos, l, alcan, tam) {}
+	Defensa(Vector2D pos, Vector2D tam, float l, float alcan, unsigned int cad) : Objeto(pos, l, alcan, cad, tam) {}
 	~Defensa();
 
 	void dibuja();

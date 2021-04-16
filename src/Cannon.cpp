@@ -2,7 +2,7 @@
 
 
 
-Cannon::Cannon(Vector2D pos, int niv):Defensa(pos, Vector2D(8.0f, 5.0f), 10.0f, 30.0f) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
+Cannon::Cannon(Vector2D pos, int niv):Defensa(pos, Vector2D(8.0f, 5.0f), 10.0f, 30.0f, 6) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
 {
 	direccion = "imagenes/Cannon.png";
 	switch (niv)

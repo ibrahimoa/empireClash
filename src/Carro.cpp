@@ -1,8 +1,8 @@
 #include "Carro.h"
 
 
-
-Carro::Carro(Vector2D pos, int niv) :Tropa("imagenes/Carro.png", Vector2D(12.0f, 12.0f), 3.2f, pos, 6.0f, 25.0f) //Tropa(std::string direccion, Vector2D tamaño, float velocidad, Vector2D posicion, float lado, float alcance);
+//Tropa(std::string direccion, Vector2D tamaño, float velocidad, Vector2D posicion, float lado, float alcance, int cadencia);
+Carro::Carro(Vector2D pos, int niv) :Tropa("imagenes/Carro.png", Vector2D(12.0f, 12.0f), 3.2f, pos, 6.0f, 25.0f, 8)
 {
 	switch (niv)
 	{

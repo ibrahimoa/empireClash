@@ -1,7 +1,7 @@
 #include "Tanque.h"
 
 
-Tanque::Tanque(Vector2D pos, int niv):Defensa(pos, Vector2D(15.0f, 12.0f), 10.0f, 25.0f) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
+Tanque::Tanque(Vector2D pos, int niv):Defensa(pos, Vector2D(15.0f, 12.0f), 10.0f, 25.0f, 4) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
 {
 	direccion = "imagenes/Tanque.png";
 	switch (niv)

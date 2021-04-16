@@ -10,7 +10,7 @@ class ListaDisparos
 public:
 	ListaDisparos();
 	~ListaDisparos();
-	bool agregar(Disparo* d);
+	bool agregar(Disparo* d, int cadencia);
 	void dibuja();
 	void destruirContenido();
 	void eliminar(unsigned int index);

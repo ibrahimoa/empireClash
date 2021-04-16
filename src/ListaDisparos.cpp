@@ -14,10 +14,10 @@ ListaDisparos::~ListaDisparos()
 }
 
 
-bool ListaDisparos::agregar(Disparo* d)
+bool ListaDisparos::agregar(Disparo* d, int cadencia)
 { 
-	int a = ETSIDI::lanzaDado(80);
-	if (a==1){
+	int rnd = ETSIDI::lanzaDado(400, 1);
+	if (rnd <= cadencia) {
 		lista.push_back(d);
 		if (d->getTropa()) ETSIDI::play("sonidos/shot-troop.wav");
 		else ETSIDI::play("sonidos/shot-defense.wav");

@@ -2,7 +2,7 @@
 
 
 
-Torreta::Torreta(Vector2D pos, int niv):Defensa(pos, Vector2D(12.0f, 16.0f), 10.0f, 45.0f) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
+Torreta::Torreta(Vector2D pos, int niv):Defensa(pos, Vector2D(12.0f, 16.0f), 10.0f, 45.0f, 10) //Defensa(Vector2D posicion, Vector2D tamaño, float lado, float alcance)
 {
 	direccion = "imagenes/Torreta.png";
 	switch (niv)

@@ -12,6 +12,7 @@ public:
 	void setPos(float x, float y, int niv = 1);
 	virtual void rageMode(float f) {
 		daño = getDaño() * f;
+		cadencia = getCadencia() * (int)(f - 1);
 		vida += getVida_inic() * f;
 	}
 };

@@ -1,8 +1,8 @@
 #include "Soldado.h"
 
 
-
-Soldado::Soldado(Vector2D pos, int niv) :Tropa("imagenes/Soldado.png", Vector2D(22.0f, 16.0f), 2.0f, pos, 9.0f, 30.0f) //Tropa(std::string direccion, Vector2D tam, float vel, Vector2D pos, float l, float alcan);
+//Tropa(std::string direccion, Vector2D tam, float vel, Vector2D pos, float l, float alcan, int cad);
+Soldado::Soldado(Vector2D pos, int niv) :Tropa("imagenes/Soldado.png", Vector2D(22.0f, 16.0f), 2.0f, pos, 9.0f, 30.0f, 4) 
 {
 	aux = 1;
 	switch (niv)

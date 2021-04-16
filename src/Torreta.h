@@ -13,6 +13,7 @@ public:
 	virtual void rageMode(float f) {
 		setRage();
 		daño = getDaño() * f;
+		cadencia = getCadencia() * (int)(f - 1);
 		vida += getVida_inic() * f;
 	}
 };

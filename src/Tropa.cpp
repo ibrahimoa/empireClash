@@ -2,7 +2,7 @@
 #include "ETSIDI.h"
 #define PI 3.1416
 
-Tropa::Tropa(std::string direccion, Vector2D tam, float velo, Vector2D pos, float l, float alcan) :sprite(direccion.c_str(), 4, 4), velocidad(velo), Objeto(pos, l, alcan, tam) {
+Tropa::Tropa(std::string direccion, Vector2D tam, float velo, Vector2D pos, float l, float alcan, unsigned int cad) :sprite(direccion.c_str(), 4, 4), velocidad(velo), Objeto(pos, l, alcan, cad, tam) {
 	sprite.setCenter(tam.x / 2, tam.y / 2);
 	sprite.setSize(tam.x, tam.y);
 	vel = Vector2D(0, 0);

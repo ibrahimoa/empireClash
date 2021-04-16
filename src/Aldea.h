@@ -4,7 +4,9 @@
 #include "Lista.h"
 #include "ListaDisparos.h"
 
-
+// todo / FIXME : Añadir propiedad de cadencia en los disparos -> Aleatorio pero con distinta probabilidad según la tropa o defensa. 
+// soldado (tanque) poca cadencia, jeep media, carro alta. Defensas lo mismo (torreta muy alta, tanque baja, cannon media)
+// cadencia 1-100 -> 100 equivale un 100% de posibilidades, 1 equivale a un 1%
 class Aldea
 {
 private:
