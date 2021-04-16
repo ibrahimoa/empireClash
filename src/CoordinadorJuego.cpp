@@ -177,10 +177,10 @@ void CoordinadorJuego::dibuja() {
 		ETSIDI::printxy("PRESS S TO START", -3, 4);
 		ETSIDI::printxy("PRESS E TO EXIT", -3, 3); 
 		ETSIDI::setTextColor(1.0f, 1.0f, 1.0f);
-		ETSIDI::setFont("fuentes/Bitwise.ttf", 13);
-		ETSIDI::printxy("Victor Zamora Mayoral", 6, -1);
-		ETSIDI::printxy("Ibrahim Oulad Amar", 6, -2);
-		ETSIDI::printxy("Alejandro Ramirez Lopez", 6, -3);
+		ETSIDI::setFont("fuentes/Bitwise.ttf", 14);
+		ETSIDI::printxy("Victor Zamora Mayoral", 6, 0);
+		ETSIDI::printxy("Ibrahim Oulad Amar", 6, -1);
+		ETSIDI::printxy("Alejandro Ramirez Lopez", 6, -2);
 	}
 /*	else if (estado==INSTRUCCIONES){
 		pantalla.~Loseta();
