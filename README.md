@@ -12,4 +12,4 @@ Whoever destroys all the enemy's objects first wins the level, and whoever passe
 There are different troops, as will be seen later, characterized by their speed, damage and range. These values will vary as the
 level. The number of defenses and the available number of troops will also increase.
 
-This game is developed in C++ using **OpenGL** libraries and the **ETSIDI library** provided by Professor *Miguel Hernando Gutierrez* from the *Technical University of Madrid* (UPM).
+This game is developed in C++ using **OpenGL** libraries (glut) and the **ETSIDI library** provided by Professor Miguel Hernando Gutierrez from the Universidad Politecnica de Madrid (UPM).
